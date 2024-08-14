@@ -11,9 +11,42 @@ const Products = () => {
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  const { data, loading, error } = useFetch(
-    `/subcategories?[filters][categories][id][$eq]=${catId}`
-  );
+  const dummyData = [
+    {
+      id: 1,
+      attributes: {
+        title: "Product 1",
+        price: 15000,
+        img1: "/img/dummy_img1.webp",
+        img2: "/img/dummy_img2.webp",
+      },
+    },
+    {
+      id: 2,
+      attributes: {
+        title: "Product 2",
+        price: 8000,
+        img1: "/img/dummy_img4.webp",
+        img2: "/img/dummy_img5.webp",
+      },
+    },
+    {
+      id: 3,
+      attributes: {
+        title: "Product 3",
+        price: 12000,
+        img1: "/img/dummy_img6.webp",
+        img2: "/img/dummy_img7.webp",
+      },
+    },
+    // Add more products as needed
+  ];
+
+  const data = dummyData;
+  const loading = false;
+  // const { data, loading, error } = useFetch(
+  //   `/subcategories?[filters][categories][id][$eq]=${catId}`
+  // );
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -86,7 +119,7 @@ const Products = () => {
           src="https://culted.com/wp-content/uploads/2022/10/a1e8f6671a9476a30b59d65af728549b8fada211-1100x735-1.jpg"
           alt=""
         />
-        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={data} />
       </div>
     </div>
   );
