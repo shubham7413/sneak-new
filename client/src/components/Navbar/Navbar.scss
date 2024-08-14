@@ -1,0 +1,77 @@
+.navbar {
+  // height: 80px;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: white;
+  font-weight: 700;
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0071dc;
+
+    .logo{
+      width: 50px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      // font-size: 36px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .center {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: white;
+      width: 40%;
+    }
+    .search-field{
+      background: white;
+    border-radius: 2em;
+    width: 100%;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: #ffffff;
+        cursor: pointer;
+
+        .cartIcon {
+          position: relative;
+
+          span {
+            font-size: 1rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: white;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
